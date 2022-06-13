@@ -53,28 +53,7 @@
         <div class="col-12">
           <h2 class="center m-bottom">Abstract</h2>
           <p>
-            While behavior learning has made impressive progress in recent times, it lags behind computer vision and
-            natural
-            language processing due to its inability to lever- age large, human generated datasets. Human behavior has a
-            wide
-            variance, multiple modes, and human demonstrations naturally don’t come with reward labels. These properties
-            limit the
-            applicability of current methods in Offline RL and Behavioral Cloning to learn from large, pre-collected
-            datasets. In
-            this work, we present Behavior Transformer (BeT), a new technique to model unlabeled demonstration data with
-            multiple
-            modes. BeT retrofits standard transformer architectures with action discretization coupled with a multi-task
-            action
-            correction inspired by offset prediction in object detection. This allows us to leverage the multi-modal
-            modeling
-            ability of modern transformers to predict multi-modal continuous actions. We experimentally evaluate BeT on
-            a variety of
-            robotic manipulation and self-driving behavior datasets. We show that BeT significantly improves over prior
-            state-of-the-art work on solving demonstrated tasks while capturing the major modes present in the
-            pre-collected
-            datasets. Finally, through an extensive ablation study we further analyze the importance of every crucial
-            component in
-            BeT.
+            Imitation learning holds tremendous promise in learning policies efficiently for complex decision making problems. Current state-of-the-art algorithms often use inverse reinforcement learning (IRL), where given a set of expert demonstrations, an agent alternatively infers a reward function and the associated optimal policy. However, such IRL approaches often require substantial online interactions for complex control problems. In this work, we present Regularized Optimal Transport (ROT), a new imitation learning algorithm that builds on recent advances in optimal transport based trajectory-matching. Our key technical insight is that adaptively combining trajectory-matching rewards with behavior cloning can significantly accelerate imitation even without task-specific rewards. Our experiments on 20 visual control tasks across the DeepMind Control Suite, the OpenAI Robotics Suite, and the Meta-World Benchmark, demonstrate an average of 8.7x faster imitation to reach 90% of expert performance compared to prior state-of-the-art methods. On real-world manipulation, with just one demonstration and an hour of online training, ROT achieves an average success rate of 89% across 12 tasks.
           </p>
         </div>
       </div>
@@ -83,7 +62,7 @@
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <h2 class="center m-bottom">Unconditional Rollouts of BeT</h2>
+          <h2 class="center m-bottom">Real-World Results</h2>
           <p>Unconditional rollouts from BeT models trained from multi-modal demonstartions on the CARLA, Block push,
             and
             Franka
