@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js">
+</script>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="Behavior Transformers: Cloning k modes with one stone">
+  <meta property="og:description" content="Behavior Transformers: Cloning k modes with one stone">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Behavior Transformers: Cloning k modes with one stone">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Behavior Transformers: Cloning k modes with one stone">
+  <meta name="twitter:description"
+    content="-Behavior Transformer (BeT), a new technique to model unlabeled demonstration data with multiple modes.">
+  <meta name="twitter:image" content="./mfiles/arch bet.001.png" />
+  <link rel="shortcut icon" href="img/favicon.png">
+  <link rel="stylesheet" href="css/simple-grid.css">
+  <title>Behavior Transformers: Cloning k modes with one stone</title>
+</head>
+
+<body>
+  <div class="jumbotron">
+    <div class="container">
+      <div class="row">
+        <div class="col-13 center">
+          <h1>Behavior Transformers: Cloning <math display="inline">
+              <mi>k</mi>
+            </math> modes with one stone</h1>
+        </div>
+        <div class="col-3 hidden-sm"></div>
+        <div class="col-2 center">
+          <a style="text-decoration: none" href="" download>
+            <h3 style="color: #F5A803">Paper</h3>
+          </a>
+        </div>
+        <div class="col-2 center">
+          <a style="text-decoration: none" href="" download>
+            <h3 style="color: #F5A803">Code</h3>
+          </a>
+        </div>
+        <div class="col-2 center">
+          <a style="text-decoration: none" href="" download>
+            <h3 style="color: #F5A803">Data</h3>
+          </a>
+        </div>
+      </div>
+
+      <!--Abstract-->
+      <div class="row">
+        <div class="col-12">
+          <h2 class="center m-bottom">Abstract</h2>
+          <p>
+            While behavior learning has made impressive progress in recent times, it lags behind computer vision and
+            natural
+            language processing due to its inability to lever- age large, human generated datasets. Human behavior has a
+            wide
+            variance, multiple modes, and human demonstrations naturally don’t come with reward labels. These properties
+            limit the
+            applicability of current methods in Offline RL and Behavioral Cloning to learn from large, pre-collected
+            datasets. In
+            this work, we present Behavior Transformer (BeT), a new technique to model unlabeled demonstration data with
+            multiple
+            modes. BeT retrofits standard transformer architectures with action discretization coupled with a multi-task
+            action
+            correction inspired by offset prediction in object detection. This allows us to leverage the multi-modal
+            modeling
+            ability of modern transformers to predict multi-modal continuous actions. We experimentally evaluate BeT on
+            a variety of
+            robotic manipulation and self-driving behavior datasets. We show that BeT significantly improves over prior
+            state-of-the-art work on solving demonstrated tasks while capturing the major modes present in the
+            pre-collected
+            datasets. Finally, through an extensive ablation study we further analyze the importance of every crucial
+            component in
+            BeT.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--Videos-->
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="center m-bottom">Unconditional Rollouts of BeT</h2>
+          <p>Unconditional rollouts from BeT models trained from multi-modal demonstartions on the CARLA, Block push,
+            and
+            Franka
+            Kitchen environments. Due to the multi-modal architecture of BeT, even in the same environment successive
+            rollouts can
+            achieve different goals or the same goals in different ways.
+          </p>
+        </div>
+      </div>
+    </div>
+    <br><br>
+    <div class="body-content">
+      <div class="container">
+        <div class="grid-display">
+          <br><br>
+          <div class="row">
+            <div class="col-6">
+              <video class="img" style="height: 600" controls muted autoplay loop>
+                <source src="./mfiles/env/pushblock/1.1 Push Block-2.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="col-6">
+              <video class="img" style="height: 600" controls muted autoplay loop>
+                <source src="./mfiles/env/pushblock/Final BlockPush-2.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <br><br>
+          <div class="row">
+            <div class="col-6">
+              <video class="img" style="height: 600" controls muted autoplay loop>
+                <source src="./mfiles/env/kitchen/1st Kitchen.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="col-6 center">
+              <video class="img" style="height: 600" controls muted autoplay loop>
+                <source src="./mfiles/env/kitchen/2nd Kitchen.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <br><br>
+          <div class="row">
+            <div class="col-6">
+              <video class="img" controls muted autoplay loop>
+                <source src="./mfiles/env/carla/1st Traj Over.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="col-6">
+              <video class="img" style="width: 100%" controls muted autoplay loop>
+                <source src="./mfiles/env/carla/2nd Traj Over.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="row">
+
+            <div class="col-6 left">
+              <video class="img" style="width: 100%" controls muted autoplay loop>
+                <source src="./mfiles/env/carla/1st Traj Obs-2.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="col-6 left">
+              <video class="img" style="width: 100%" controls muted autoplay loop>
+                <source src="./mfiles/env/carla/2nd Traj Obs-2.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Image-->
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="center m-bottom">Method</h2>
+          <p><a style="color: #00A2FF; font-weight: bold;">Behavior Transformers (BeT)</a>, a new method for learning
+            behaviors from rich, distributionally multi-modal data.</h4>
+          <p>Architecture of Behavior Transformer is shown below. (A) The continuous action binning using k-means
+            algorithm that lets BeT split
+            every action into a discrete bin and a continuous offset, and later combine them into one full action. (B)
+            Training BeT
+            using demonstrations offline; each ground truth action provides a ground truth bin and residual action,
+            which is used to
+            train the minGPT trunk with its binning and action offset heads. (C) Rollouts from BeT in test time, where
+            it first
+            chooses a bin and then picks the corresponding offset to reconstruct a continuous action.</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-14 center img">
+        <img src="./mfiles/BeT figures Fin.gif" style="max-width:3200px;width:120%" frameborder="0"
+          allowfullscreen></img>
+      </div>
+    </div>
+
+    <!--Method-->
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <p>BeT is based of three key insights.
+          <ul style="font-size: 1.125rem;font-weight: 200;line-height: 1.8">
+            <li>First, we leverage the context
+              based multi-token prediction ability of transformer-based sequence models to predict multi-
+              modal actions.</li>
+            <li>Second, since transformer-based sequence models are naturally suited to predicting
+              discrete classes, we cluster continuous actions into discrete bins using k-means. This allows us
+              to model high-dimensional, continuous multi-modal action distributions as categorical distributions
+              without learning complicated generative models.</li>
+            <li>Third, to ensure that the actions sampled
+              from BeT are useful for online rollouts, we concurrently learn a residual action corrector to produce
+              continuous actions for a specific sampled action bin.</li>
+          </ul>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!--Experiments-->
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="center m-bottom">Experiments</h2>
+          <p>Performance of BeT compared with different baselines in learning from demonstrations. For CARLA, we measure
+            the
+            probability of the car reaching the goal successfully. For Block push, we measure the probability of
+            reaching one and
+            two blocks, and the probabilities of pushing one and two blocks to respective squares. For Kitchen, we
+            measure the
+            probability of <math display="inline">
+              <mi>n</mi>
+            </math> tasks being completed by the model within the allotted 280 times. Evaluations are over 100 rollouts
+            in CARLA and 1,000 rollouts in Block push and Kitchen environments.
+          </p>
+          <img class="center" src="./mfiles/Exp Table.001.png" style="width:100%"></img>
+          <p>Distribution of most frequent tasks completed in sequence in the Kitchen environment. Each task is colored
+            differently,
+            and frequency is shown out of a 1,000 unconditional rollouts from the models.
+          </p>
+          <br><br>
+          <img class="center" src="./mfiles/multimodal_colorbar_flipped-1.png" style="width:100%"></img>
+        </div>
+      </div>
+    </div>
+
+    <!--Future Work-->
+    <div class="container" style="padding-bottom: 150px; padding-top: 20px">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="center m-bottom">Future Work</h2>
+          <p>In this work, we introduce Behavior Transformers (BeT), which uses a transformer-decoder based
+            backbone with a discrete action mode predictor coupled with a continuous action offset corrector
+            to model continuous actions sequences from open-ended, multi-modal demonstrations. While
+            BeT shows promise, the truly exciting use of it would be to learn diverse behavior from human
+            demonstrations or interactions in the real world. In parallel, extracting a particular, unimodal behavior
+            policy from BeT during online interactions, either by distilling the model or by generating the right
+            ‘prompts’, would make BeT tremendously useful as a prior for online Reinforcement Learning.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <footer>
+  </footer>
+</body>
+
+</html>
