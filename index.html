@@ -14,7 +14,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Watch and Match: Supercharging Imitation with Regularized Optimal Transport">
   <meta name="twitter:description"
-    content="-Regularized Optimal Transport (ROT), a new imitation learning algorithm that substantially improves sample efficiency for continuous control problems.">
+    content="We propose a new imitation learning algorithm that substantially improves sample efficiency for continuous control problems in simulation and on real-world robotic manipulation tasks.">
   <meta name="twitter:image" content="./mfiles/arch bet.001.png" />
   <link rel="shortcut icon" href="img/favicon.png">
   <link rel="stylesheet" href="css/simple-grid.css">
@@ -35,12 +35,12 @@
           </a>
         </div>
         <div class="col-2 center">
-          <a style="text-decoration: none" href="" download>
+          <a style="text-decoration: none" href="https://osf.io/vyu7q/?view_only=040ed766b96847b4aadaba8acd6ab3dd" download>
             <h3 style="color: #F5A803">Code</h3>
           </a>
         </div>
         <div class="col-2 center">
-          <a style="text-decoration: none" href="" download>
+          <a style="text-decoration: none" href="https://osf.io/vyu7q/?view_only=040ed766b96847b4aadaba8acd6ab3dd" download>
             <h3 style="color: #F5A803">Data</h3>
           </a>
         </div>
@@ -51,17 +51,21 @@
         <div class="col-12">
           <h2 class="center m-bottom">Abstract</h2>
           <p>
-            Imitation learning holds tremendous promise in learning policies efficiently for complex decision making problems. 
-            Current state-of-the-art algorithms often use inverse reinforcement learning (IRL), where given a set of expert 
-            demonstrations, an agent alternatively infers a reward function and the associated optimal policy. However, such IRL 
-            approaches often require substantial online interactions for complex control problems. In this work, we present 
-            Regularized Optimal Transport (ROT), a new imitation learning algorithm that builds on recent advances in optimal 
-            transport based trajectory-matching. Our key technical insight is that adaptively combining trajectory-matching rewards 
-            with behavior cloning can significantly accelerate imitation even without task-specific rewards. Our experiments on 20 
-            visual control tasks across the DeepMind Control Suite, the OpenAI Robotics Suite, and the Meta-World Benchmark, 
-            demonstrate an average of 8.7x faster imitation to reach 90% of expert performance compared to prior state-of-the-art 
-            methods. On real-world manipulation, with just one demonstration and an hour of online training, ROT achieves an average 
-            success rate of 89% across 12 tasks.
+            Imitation learning holds tremendous promise in learning policies efficiently for2
+            complex decision making problems. Current state-of-the-art algorithms often use
+            inverse reinforcement learning (IRL), where given a set of expert demonstrations,
+            an agent alternatively infers a reward function and the associated optimal policy.
+            However, such IRL approaches often require substantial online interactions for
+            complex control problems. In this work, we present Regularized Optimal Transport
+            (ROT), a new imitation learning algorithm that builds on recent advances in optimal
+            transport based trajectory-matching. Our key technical insight is that adaptively
+            combining trajectory-matching rewards with behavior cloning can significantly
+            accelerate imitation even with only a few demonstrations. Our experiments on 20
+            visual control tasks across the DeepMind Control Suite, the OpenAI Robotics Suite,
+            and the Meta-World Benchmark demonstrate an average of 7.8× faster imitation
+            to reach 90% of expert performance compared to prior state-of-the-art methods.
+            On real-world robotic manipulation, with just one demonstration and an hour of
+            online training, ROT achieves an average success rate of 90.1% across 14 tasks.
           </p>
         </div>
       </div>
@@ -71,9 +75,9 @@
       <div class="row">
         <div class="col-12">
           <h2 class="center m-bottom">Real-World Results</h2>
-          <p>We provide evaluation rollouts of ROT on a set of 12 real-world manipulation tasks. With just one demonstration and one hour of
-             online training, ROT achieved an average sucess rate of 89% across 12 tasks. This is significantly higher than behavior 
-             cloning (30%) and adversarial IRL (13%) based approaches.
+          <p>We provide evaluation rollouts of ROT on a set of 14 real-world manipulation tasks. With just one demonstration and one hour of
+             online training, ROT achieved an average sucess rate of 90.1% across 14 tasks. This is significantly higher than behavior 
+             cloning (36.1%) and adversarial IRL (14.6%) based approaches.
           </p>
         </div>
       </div>
@@ -86,12 +90,12 @@
           <div class="row">
             <div class="col-6">
               <video class="img" style="height: 600" controls muted autoplay loop>
-                <source src="./mfiles/env/pushblock/1.1 Push Block-2.mp4" type="video/mp4">
+                <source src="./mfiles/videos/DoorClose_ROT_5traj.mp4" type="video/mp4">
               </video>
             </div>
             <div class="col-6">
               <video class="img" style="height: 600" controls muted autoplay loop>
-                <source src="./mfiles/env/pushblock/Final BlockPush-2.mp4" type="video/mp4">
+                <source src="./mfiles/videos/hanghanger_ROT_5traj.mp4" type="video/mp4">
               </video>
             </div>
           </div>
@@ -99,12 +103,12 @@
           <div class="row">
             <div class="col-6">
               <video class="img" style="height: 600" controls muted autoplay loop>
-                <source src="./mfiles/env/kitchen/1st Kitchen.mp4" type="video/mp4">
+                <source src="./mfiles/videos/EraseBoard_ROT_5traj.mp4" type="video/mp4">
               </video>
             </div>
             <div class="col-6 center">
               <video class="img" style="height: 600" controls muted autoplay loop>
-                <source src="./mfiles/env/kitchen/2nd Kitchen.mp4" type="video/mp4">
+                <source src="./mfiles/videos/reach_ROT_5traj.mp4" type="video/mp4">
               </video>
             </div>
           </div>
@@ -112,25 +116,60 @@
           <div class="row">
             <div class="col-6">
               <video class="img" controls muted autoplay loop>
-                <source src="./mfiles/env/carla/1st Traj Over.mp4" type="video/mp4">
+                <source src="./mfiles/videos/hangcup_ROT_5traj.mp4" type="video/mp4">
               </video>
             </div>
             <div class="col-6">
               <video class="img" style="width: 100%" controls muted autoplay loop>
-                <source src="./mfiles/env/carla/2nd Traj Over.mp4" type="video/mp4">
+                <source src="./mfiles/videos/hangbag_ROT_5traj.mp4" type="video/mp4">
               </video>
             </div>
           </div>
           <div class="row">
-
             <div class="col-6 left">
               <video class="img" style="width: 100%" controls muted autoplay loop>
-                <source src="./mfiles/env/carla/1st Traj Obs-2.mp4" type="video/mp4">
+                <source src="./mfiles/videos/turnknob_ROT_5traj.mp4" type="video/mp4">
               </video>
             </div>
             <div class="col-6 left">
               <video class="img" style="width: 100%" controls muted autoplay loop>
-                <source src="./mfiles/env/carla/2nd Traj Obs-2.mp4" type="video/mp4">
+                <source src="./mfiles/videos/CupStacking_ROT_5traj.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6 left">
+              <video class="img" style="width: 100%" controls muted autoplay loop>
+                <source src="./mfiles/videos/ButtonPress_ROT_5traj.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="col-6 left">
+              <video class="img" style="width: 100%" controls muted autoplay loop>
+                <source src="./mfiles/videos/peginserteasy_ROT_5traj.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6 left">
+              <video class="img" style="width: 100%" controls muted autoplay loop>
+                <source src="./mfiles/videos/peginsertmed_ROT_5traj.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="col-6 left">
+              <video class="img" style="width: 100%" controls muted autoplay loop>
+                <source src="./mfiles/videos/peginserthard_ROT_5traj.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6 left">
+              <video class="img" style="width: 100%" controls muted autoplay loop>
+                <source src="./mfiles/videos/BoxOpen_ROT_5traj.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="col-6 left">
+              <video class="img" style="width: 100%" controls muted autoplay loop>
+                <source src="./mfiles/videos/pour_ROT_3traj.mp4" type="video/mp4">
               </video>
             </div>
           </div>
@@ -153,7 +192,7 @@
     </div>
     <div class="row">
       <div class="center img">
-        <img src="./mfiles/corl_intro_fig.jpeg" style="max-width:1500px;width:50%" frameborder="0"
+        <img src="./mfiles/corl_intro_fig.png" style="max-width:1500px;width:50%" frameborder="0"
           allowfullscreen></img>
       </div>
     </div>
@@ -165,10 +204,11 @@
           <p>Our main findings can be summarized as:
           <ul style="font-size: 1.125rem;font-weight: 200;line-height: 1.8">
             <li>ROT outperforms prior state-of-the-art imitation methods, reaching 90% of expert performance
-              8.7% faster than our strongest baselines on simulated visual control benchmarks.</li>
-            <li>On real-world tasks, with a single human demonstration and an hour of training, ROT achieves an
-              average success rate of 89% with randomized robot initialization and image observations. This is
-              significantly higher than behavior cloning (30%) and adversarial IRL (13%) based approaches.</li>
+              7.8× faster than our strongest baselines on simulated visual control benchmarks.</li>
+            <li>On real-world tasks, with a single human demonstration and an hour of training, ROT achieves
+              an average success rate of 90.1% with randomized robot initialization and image observations.
+              This is significantly higher than behavior cloning (36.1%) and adversarial IRL (14.6%) based
+              approaches.</li>
             <li>ROT exceeds the performance of state-of-the-art RL trained with rewards, while coming close to
               methods that augment RL with demonstrations. Unlike standard RL methods, ROT does not require 
               hand-specification of the reward function.</li>
@@ -187,23 +227,24 @@
         <div class="col-12">
           <h2 class="center m-bottom">Experiments</h2>
           <p>To demonstrate the effectiveness of ROT, we run extensive experiments on 20 simulated tasks across
-            DM Control, OpenAI Robotics, and Meta-world, and 12 robotic manipulation tasks on an xArm. For DM Control, we 
+            DM Control, OpenAI Robotics, and Meta-world, and 14 robotic manipulation tasks on an xArm. For DM Control, we 
             measure the average episode reward. For OpenAI Robotics, Meta-world and the real-world xArm tasks, we measure the number
             of successful trajectories. Evaluations are over 10 trajectories for the simulated tasks and 20 trajectories for the 
             real-world tasks. To reach 90% of expert performance, ROT is on average
           </p>
           <ul style="font-size: 1.125rem;font-weight: 200;line-height: 1.8">
-            <li> 8.9× faster on DeepMind Control tasks</li>
+            <li> 8.7× faster on DeepMind Control tasks</li>
             <img class="center" src="./mfiles/appendix_pixel_results_dmc.png" style="width:100%"></img>
-            <li>2.37× faster on OpenAI Robotics tasks</li>
+            <li>2.1× faster on OpenAI Robotics tasks</li>
             <img class="center" src="./mfiles/appendix_pixel_results_fetch.png" style="width:100%"></img>
-            <li>11.5× faster on Meta-world tasks</li>
+            <li>8.9× faster on Meta-world tasks</li>
             <img class="center" src="./mfiles/appendix_pixel_results_metaworld.png" style="width:100%"></img>
           </ul>
           </p>
-          <p>The performance of ROT on the real-world manipulation tasks is provided below.
+          <p>ROT is evaluated on a set of 14 robotic manipulation tasks. Success rates for each task is computed by running 20 trajectories 
+             from varying initial conditions on the robot.The performance of ROT on the real-world manipulation tasks is provided below.
           </p>
-          <img class="center" src="./mfiles/robot_results.png" style="width:100%"></img>
+          <img class="center" src="./mfiles/robot_exp_combined.png" style="width:100%"></img>
           <br><br>
           <!-- <img class="center" src="./mfiles/robot_results.png" style="width:100%"></img> -->
         </div>
@@ -215,19 +256,20 @@
       <div class="row">
         <div class="col-12">
           <h2 class="center m-bottom">Limitations and Future Work</h2>
-          <p>In this work, we propose Regularized Optimal Transport (ROT), a new imitation learning algorithm
-            that alleviates the challenge of exploration and significantly improves sample efficiency by using a
-            pretrained policy in conjunction with an adaptive regularization scheme for online finetuning. We
-            demonstrate superior performance compared to prior work on a varied set of simulated environments
-            as well as a set of real-world manipulation tasks with just one demonstration and an hour of online
-            training. However, there are a few limitations in this work: (a) Since our OT-based approach aligns
-            agents with demonstrations without task-specific rewards, it relies on the demonstrator being an
-            ‘expert’. Extending ROT to suboptimal demonstrations would be an exciting future direction. (b)
-            Performing BC pretraining and BC-based regularization requires access to expert actions, which may
-            not be present in real-world demonstrations from humans. Recent work on using inverse models to
-            infer actions given observational data could alleviate this challenge. We look forward to future
-            work that extends ROT to these scenarios with suboptimal demonstrations or unavailability of expert
-            actions.
+          <p>In this work, we have proposed a new imitation learning algorithm, ROT, that demonstrates improved
+            performance compared to prior state-of-the-art work on a variety of simulated and robotic domains.
+            However, we recognize a few limitations in this work: (a) Since our OT-based approach aligns agents
+            with demonstrations without task-specific rewards, it relies on the demonstrator being an ‘expert’.
+            Extending ROT to suboptimal, noisy and multimodal demonstrations would be an exciting problem to
+            tackle. (b) Performing BC pretraining and BC-based regularization requires access to expert actions,
+            which may not be present in some real-world scenarios particularly when learning from humans.
+            Recent work on using inverse models to infer actions given observational data could alleviate this
+            challenge. (c) On robotic tasks such as Peg in box (hard) and Pressing a switch from Fig. 3, we
+            find that ROT’s performance drops substantially compared to other tasks. This might be due to the
+            lack of visual features corresponding to the task success. For example, in the ‘Peg’ task, it is visually
+            difficult to discriminate if the peg is in the box or behind the box. Similarly for the ‘Switch’ task, it is
+            difficult to discern if the button was pressed or not. This limitation can be addressed by integrating
+            more sensory modalities such as additional cameras, and tactile sensors in the observation space.
           </p>
         </div>
       </div>
