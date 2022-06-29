@@ -130,7 +130,7 @@
         </div>
       </div>
     </div> -->
-    <div class="container">
+    <!-- <div class="container">
       <div class="row">
         <div class="col-12">
           <h2 class="center m-bottom">Real-World Results</h2>
@@ -141,8 +141,8 @@
         </div>
       </div>
     </div>
-    <br><br>
-    <div class="body-content">
+    <br><br> -->
+    <!-- <div class="body-content">
       <div class="container">
         <div class="grid-display">
           <div class="row">
@@ -203,7 +203,33 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
+
+    <!-- <div class="column center"> 
+      <div class="row">
+      <img src="./mfiles/gifs/closedoor.gif" style="max-width:200px">
+      <img src="./mfiles/gifs/hanghanger.gif" style="max-width:200px">
+      <img src="./mfiles/gifs/eraseboard.gif" style="max-width:200px">
+      <img src="./mfiles/gifs/reach.gif" style="max-width:200px">
+      <img src="./mfiles/gifs/hangcup.gif" style="max-width:200px">
+      <img src="./mfiles/gifs/hangbag.gif" style="max-width:200px">
+      <img src="./mfiles/gifs/turnknob.gif" style="max-width:200px">
+      </div>
+      <div class="row">
+        <img src="./mfiles/gifs/stackcups.gif" style="max-width:200px">
+        <img src="./mfiles/gifs/pressbutton.gif" style="max-width:200px">
+        <img src="./mfiles/gifs/insertpegeasy.gif" style="max-width:200px">
+        <img src="./mfiles/gifs/insertpegmed.gif" style="max-width:200px">
+        <img src="./mfiles/gifs/insertpeghard.gif" style="max-width:200px">
+        <img src="./mfiles/gifs/openbox.gif" style="max-width:200px">
+        <img src="./mfiles/gifs/pour.gif" style="max-width:200px">
+      </div>
+    </div> -->
+    <!-- <div class="column center"> 
+      <div class="row">
+      <img src="./mfiles/gifs/combined_gif_cropped.gif" style="width: 50%;">
+      </div>
+    </div> -->
 
     <!--Image-->
     <div class="container">
@@ -253,12 +279,17 @@
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <h2 class="center m-bottom">Experiments</h2>
+          <!-- <h2 class="center m-bottom">Experiments</h2>
           <p>To demonstrate the effectiveness of ROT, we run extensive experiments on 20 simulated tasks across
             DM Control, OpenAI Robotics, and Meta-world, and 14 robotic manipulation tasks on an xArm. For DM Control, we 
             measure the average episode reward. For OpenAI Robotics, Meta-world and the real-world xArm tasks, we measure the number
             of successful trajectories. Evaluations are over 10 trajectories for the simulated tasks and 20 trajectories for the 
             real-world tasks. To reach 90% of expert performance, ROT is on average
+          </p> -->
+          <h2 class="center m-bottom">Simulation Results</h2>
+          <p>Our experiments on 20 tasks across the DeepMind Control Suite, the OpenAI Robotics Suite, and the Meta-World Benchmark,
+             demonstrate an average of 7.8× faster imitation to reach 90% of expert performance compared to prior state-of-the-art
+             methods. Individually, to reach 90% of expert performance, ROT is on average
           </p>
           <ul style="font-size: 1.125rem;font-weight: 200;line-height: 1.8">
             <li> 8.7× faster on DeepMind Control tasks</li>
@@ -269,10 +300,14 @@
             <img class="center" src="./mfiles/appendix_pixel_results_metaworld.png" style="width:100%"></img>
           </ul>
           </p>
-          <p>ROT is evaluated on a set of 14 robotic manipulation tasks. Success rates for each task is computed by running 20 trajectories 
-             from varying initial conditions on the robot.The performance of ROT on the real-world manipulation tasks is provided below.
+          <h2 class="center m-bottom">Robot Results</h2>
+          <p>We provide evaluation rollouts of ROT on a set of 14 real-world manipulation tasks. With just one demonstration and one hour of
+            online training, ROT achieved an average sucess rate of 90.1% across 14 tasks. This is significantly higher than behavior 
+            cloning (36.1%) and adversarial IRL (14.6%) based approaches.
           </p>
-          <img class="center" src="./mfiles/robot_exp_combined.png" style="width:100%"></img>
+          <img src="./mfiles/gifs/combined_gif_cropped.gif" style="width: 100%;">
+          <img class="center" src="./mfiles/robot_exp_combined_cropped.png" style="width:100%"></img>
+          <!-- <img class="center" src="./mfiles/robot_exp_combined.png" style="width:100%"></img> -->
           <br><br>
           <!-- <img class="center" src="./mfiles/robot_results.png" style="width:100%"></img> -->
         </div>
